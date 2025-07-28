@@ -14,11 +14,11 @@ ui <- fluidPage(
   introjsUI(),
   
   tags$div(
-    style = "display: flex; justify-content: center; align-items: center; gap: 20px; margin-top: 20px; margin-bottom: 10px;",
+    style = "display: flex; justify-content: center; align-items: center; gap: 5px; margin-top: 5px; margin-bottom: 5px;",
     tags$img(src = "logo3.png", height = "100px", alt = "Logo UNAL"),
     tags$h2("Comparación de las MCF de dos muestras", style = "margin: 0; font-weight: bold;")
   ),
-  tags$hr(style = "margin-bottom: 20px;"),
+  tags$hr(style = "margin-bottom: 10px;"),
   
   actionButton("ayuda", "📘 Mostrar tutorial", class = "btn-primary", style = "margin-bottom: 15px;"),
   sidebarLayout(
@@ -35,7 +35,7 @@ ui <- fluidPage(
       
       hr(),
       
-      h4("Variables de la base de datos 1"),
+      h4("Variables Base de datos 1"),
       uiOutput("col_id1")%>%
         tagAppendAttributes(`data-step` = 7,`data-intro` = "Selecciona la variable de identificación del equipo o sistema en la primera base de datos."),
       uiOutput("col_time1") %>%
@@ -43,7 +43,7 @@ ui <- fluidPage(
       uiOutput("col_event1")  %>%
         tagAppendAttributes(`data-step` = 9,`data-intro` = "Selecciona la variable indicadora de falla o censura en la primera base de datos."),
       
-      h4("Variables de la base de datos 2"),
+      h4("Variables Base de datos 2"),
       uiOutput("col_id2") %>%
         tagAppendAttributes(`data-step` = 10,`data-intro` = "Selecciona la variable de identificación del equipo o sistema en la segunda base de datos."),
       uiOutput("col_time2") %>%
@@ -55,10 +55,6 @@ ui <- fluidPage(
         tags$li(tags$a(href="mailto:datobonv@unal.edu.co", "Davinson Tobón-Viana")),
         tags$li(tags$a(href="mailto:mcjarami@unal.edu.co", "Mario C. Jaramillo-Elorza")),
         tags$li(tags$a(href="mailto:cmlopera@unal.edu.co", "Carlos M. Lopera-Gómez"))
-      ),
-      h4("Correspondencia:"),
-      tags$ul(
-        tags$li(tags$a(href="mailto:mcjarami@unal.edu.co", "Mario C. Jaramillo-Elorza"))
       )
     ),
     
